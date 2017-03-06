@@ -10,12 +10,12 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: [path.resolve(__dirname, 'src/js/main')],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname),
+    publicPath: path.resolve(__dirname),
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist')
+    contentBase: path.resolve(__dirname)
   },
   watch: true,
   module: {
