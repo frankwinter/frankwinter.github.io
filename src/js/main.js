@@ -11,9 +11,8 @@ let repos = api.getRepos().then(function(repos) {
   repos.forEach(repo => {
     if (repo.fork === false) {
       repoList += `<article class="repo__item">
-        <h1>${repo.name}</h1>
-        <h2>${repo.description}</h2>
-        <p>${repo.html_url}</p>
+        <h1><a href="${repo.html_url}" target="_blank">${repo.name}</a></h1>
+        <p>${repo.description}</p>
         <a class="repo__readme" href="#" data-repo="${repo.name}">RM</a>
       </article>`
     }
