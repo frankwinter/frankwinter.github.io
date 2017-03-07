@@ -30,13 +30,23 @@ p
   padding 20px
 
 .repo__item
+  opacity 0
   background white
   border 4px solid #dddddd
   padding 10px
   margin-bottom 10px
+  animation fadein 0.3s
+  animation-timing-function ease-out
+  animation-fill-mode forwards
   
+  for i in 1..100
+    &:nth-child({i+1})
+      animation-delay (i/4)s
+    
   &:last-child
     margin-bottom 0
+    
+
     
 .container--fixed
   position fixed
@@ -50,3 +60,8 @@ p
 
 #repoContainer
   padding-left 0
+  
+@keyframes fadein
+  from { opacity: 0; }
+  to   { opacity: 1; }
+    
