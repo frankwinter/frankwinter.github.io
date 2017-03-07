@@ -15,7 +15,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname)
+    contentBase: __dirname
   },
   watch: true,
   module: {
@@ -58,10 +58,5 @@ module.exports = {
     }),
     new HtmlWebpackHarddiskPlugin(),
     new WriteFilePlugin()
-  ],
-  resolve: {
-    modules: [
-      'node_modules'
-    ]
-  }
+  ]
 }

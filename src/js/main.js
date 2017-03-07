@@ -4,10 +4,10 @@ require('../styl/main.styl')
 import api from './api'
 import showdown from 'showdown'
 
-var repoList = ''
-var converter = new showdown.Converter()
+let repoList = ''
+let converter = new showdown.Converter()
 
-let repos = api.getRepos().then(function(repos) {
+let repos = api.getRepos().then(repos => {
   repos.forEach(repo => {
     if (repo.fork === false) {
       repoList += `<article class="repo__item">
@@ -20,11 +20,11 @@ let repos = api.getRepos().then(function(repos) {
 
   document.getElementById('repoContainer').innerHTML = repoList
 
-  var readmeLinks = document.querySelectorAll('.repo__readme')
+  let readmeLinks = document.querySelectorAll('.repo__readme')
 
-  readmeLinks.forEach(function(el) {
-    el.addEventListener('click', function() {
-      api.getReadme(el.getAttribute('data-repo')).then(function(readme) {
+  readmeLinks.forEach(el => {
+    el.addEventListener('click', () => {
+      api.getReadme(el.getAttribute('data-repo')).then(readme => {
         document.getElementById('readmeContainer').innerHTML = converter.makeHtml(atob(readme.content))
       })
     })

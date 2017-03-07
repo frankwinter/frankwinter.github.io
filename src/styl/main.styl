@@ -9,6 +9,21 @@ body
   margin 0
   lost-utility clearfix
   font-family 'Roboto', sans-serif
+  color #87746C
+  
+h1, h2
+  color #554037
+  
+code
+  background #F2E5DA
+  display block
+  padding 5px
+  
+  p > &
+    display inline
+    
+p
+  line-height 1.5em
   
 .container
   lost-column: 1/2
@@ -23,10 +38,15 @@ body
   &:last-child
     margin-bottom 0
     
-#readmeContainer
+.container--fixed
   position fixed
-  background #cccc88
-  min-height 100%
+  background #F7EBE1
+  height 100%
+  overflow scroll
+  padding-bottom 10px
+  
+#readmeContainer
+  height 100%
 
 #repoContainer
   padding-left 0
