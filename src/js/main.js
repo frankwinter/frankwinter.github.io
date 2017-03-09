@@ -10,17 +10,19 @@ let converter = new showdown.Converter()
 let repos = api.getRepos().then(repos => {
   repos.forEach(repo => {
     if (repo.fork === false) {
-      repoList += `<article class="repo__item">
-        <h1><a href="${repo.html_url}" target="_blank">${repo.name}</a></h1>
-        <p>${repo.description}</p>
-        <a class="repo__readme" href="#" data-repo="${repo.name}">RM</a>
+      repoList += `<article class="panel">
+        <h2 class="panel__headline">
+          <a class="panel__headline__link" href="${repo.html_url}" target="_blank">${repo.name}</a>
+        </h2>
+        <p class="panel__description">${repo.description}</p>
+        <a class="panel__readme" href="#" data-repo="${repo.name}">RM</a>
       </article>`
     }
   })
 
   document.getElementById('repoContainer').innerHTML = repoList
 
-  let readmeLinks = document.querySelectorAll('.repo__readme')
+  let readmeLinks = document.querySelectorAll('.panel__readme')
 
   readmeLinks.forEach(el => {
     el.addEventListener('click', () => {

@@ -1,19 +1,9 @@
-@lost gutter 20px;
+@import "util/config"
+@import "util/normalize"
+@import "components/panel"
+@import "layout"
 
-*
-  box-sizing border-box
-  
-body
-  background #888888
-  padding 0
-  margin 0
-  lost-utility clearfix
-  font-family 'Roboto', sans-serif
-  color #87746C
-  
-h1, h2
-  color #554037
-  
+
 code
   background #F2E5DA
   display block
@@ -24,28 +14,11 @@ code
     
 p
   line-height 1.5em
+  margin 0
   
 .container
   lost-column: 1/2
-  padding 20px
-
-.repo__item
-  opacity 0
-  background white
-  border 4px solid #dddddd
-  padding 10px
-  margin-bottom 10px
-  animation fadein 0.3s
-  animation-timing-function ease-out
-  animation-fill-mode forwards
   
-  for i in 1..100
-    &:nth-child({i+1})
-      animation-delay (i/4)s
-    
-  &:last-child
-    margin-bottom 0
-    
 
     
 .container--fixed
@@ -57,11 +30,15 @@ p
   
 #readmeContainer
   height 100%
+  padding 10px
 
 #repoContainer
+  padding 10px
   padding-left 0
   
 @keyframes fadein
   from { opacity: 0; }
   to   { opacity: 1; }
+  
+  
     
