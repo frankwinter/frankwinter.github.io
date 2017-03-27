@@ -1,0 +1,15 @@
+// ORBIT ANIMATION
+
+orbit-animation(name, radius, offset = 0, reverse = false)
+  rotate-from = 0deg + offset
+  rotate-to = 360deg + offset
+  
+  if reverse
+    rotate-from = - rotate-from
+    rotate-to = - rotate-to
+  
+  @keyframes {name}
+    from
+      transform rotate(rotate-from) translate(radius) rotate(rotate-from)
+    to
+      transform rotate(rotate-to) translate(radius) rotate(- rotate-to)

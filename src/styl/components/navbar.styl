@@ -1,0 +1,36 @@
+.navbar
+  display flex
+  background navigation-background
+  align-items center
+
+.navbar__header
+  flex 1
+  height navigation-height
+  
+  +above(4)
+    width auto
+
+.navbar__brand
+  font-size 1rem
+  margin 0 6px
+
+.navbar__brand__link
+  padding 3px 8px
+  border 3px solid white
+  color navigation-text
+  text-decoration none
+  text-transform uppercase
+  display block
+
+.navbar__toggle
+  background none
+  border none
+  margin-left auto
+  padding 0 navigation-padding
+  display flex
+  
+  .icon
+    fill navigation-text
+  
+  +above(4)
+    display none

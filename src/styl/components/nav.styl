@@ -1,0 +1,30 @@
+.nav
+  display flex
+  
+.nav__brand
+  color navigation-text
+  text-decoration none
+  text-transform uppercase
+  display block
+  flex 1
+  
+.nav .nav__list
+  margin-left auto
+  display flex
+
+.nav__link
+  width 2rem
+  height 2rem
+  display inline-block
+  color navigation-link
+  background navigation-link-background
+  text-decoration none
+  text-transform uppercase
+  padding 0 navigation-padding
+  transition all navigation-transition-time ease-out
+  text-align center
+  
+  &:hover
+  .nav__item--active &
+    color navigation-link-hover
+    background navigation-link-background-hover
