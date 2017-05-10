@@ -237,7 +237,6 @@ ul {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 navigation-padding;
-  -webkit-transition: all navigation-transition-time ease-out;
   transition: all navigation-transition-time ease-out;
   text-align: center;
 }
@@ -349,7 +348,6 @@ svg {
   width: 100%;
 }
 svg path {
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .header {
@@ -569,7 +567,7 @@ svg path {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(110,100,100,0.85);
+  background: rgba(0,0,0,0.85);
   padding: 1rem;
   color: #fff;
   display: -webkit-box;
@@ -586,7 +584,6 @@ svg path {
       -ms-flex-direction: column;
           flex-direction: column;
   opacity: 0;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .project__overlay h3,
